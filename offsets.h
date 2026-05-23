@@ -1,37 +1,227 @@
-#pragma once
-#include <cstdint>
-
+// rust dumper made by martin
+// rust version:
+// date:
+                    
 namespace offsets {
-    struct base_player {
-        inline static constexpr uintptr_t display_name = 0xD48;
-        inline static constexpr uintptr_t player_eyes = 0x538;
-        inline static constexpr uintptr_t player_inventory = 0x628;
-        inline static constexpr uintptr_t current_team = 0x4e8;
-        inline static constexpr uintptr_t base_movement = 0x4d8;
-        inline static constexpr uintptr_t player_model = 0x2c0;
-        inline static constexpr uintptr_t player_flags = 0x660;
-        inline static constexpr uintptr_t cl_active_item = 0x518;
-        inline static constexpr uintptr_t player_input = 0x3b0;
-    };
+    namespace il2cpp {
+        inline constexpr std::uintptr_t get_handle = 0xe7ccc60;
+    } //  il2cpp
 
-    struct base_combat_entity {
-        inline static constexpr uintptr_t lifestate = 0x8D0;
-        inline static constexpr uintptr_t health = 0x970;
-        inline static constexpr uintptr_t max_health = 0x990;
-        inline static constexpr uintptr_t model = 0xf0;
-    };
+    namespace base_networkable {
+        inline constexpr std::uintptr_t typeinfo = 0xe43c280;
 
-    struct base_entity {
-        inline static constexpr uintptr_t flags = 0xf8;
-    };
+        inline constexpr std::uint32_t static_fields = 0xb8;
+        inline constexpr std::uint32_t client_entities = 0x8;
+        inline constexpr std::uint32_t entity_list = 0x10;
+        inline constexpr std::uint32_t buffer = 0x18;
+        inline constexpr std::uint32_t entListBase = 0x10;
+        inline constexpr std::uint32_t entLS = 0x18;
+    } // base_networkable
 
-    struct item_container {
-        inline static constexpr uintptr_t item_list = 0x70;
-    };
+    namespace main_camera {
+        inline constexpr std::uintptr_t typeinfo = 0xe4863e8;
 
-    struct player_inventory {
-        inline static constexpr uintptr_t main = 0x58;
-        inline static constexpr uintptr_t belt = 0x78;
-        inline static constexpr uintptr_t wear = 0x60;
-    };
+        inline constexpr std::uint32_t static_fields = 0xb8;
+        inline constexpr std::uint32_t instance = 0x10;
+        inline constexpr std::uint32_t buffer = 0x10;
+    } // main_camera
+
+                                      
+    namespace BasePlayer {
+        inline constexpr std::uintptr_t username = 0x370;
+        inline constexpr std::uintptr_t team = 0x4b8;
+        inline constexpr std::uintptr_t playerModel = 0x3a8;
+        inline constexpr std::uintptr_t playerFlags = 0x630;
+        inline constexpr std::uintptr_t playerInput = 0x670;
+        inline constexpr std::uintptr_t clActiveItem = 0x4e8;
+        inline constexpr std::uintptr_t playerInventory = 0x2d8;
+    } // BasePlayer
+
+    namespace PlayerInput {
+        inline constexpr std::uintptr_t bodyAngles = 0x44;
+    } // PlayerInput
+
+    namespace BaseEntity {
+        inline constexpr std::uintptr_t model = 0xf0;
+    } // BaseEntity
+
+    namespace Item {
+        inline constexpr std::uintptr_t itemDefinition = 0x48;
+        inline constexpr std::uintptr_t itemUid = 0x2c;
+        inline constexpr std::uintptr_t itemUid2 = 0x50;
+        inline constexpr std::uintptr_t itemUid3 = 0x68;
+        inline constexpr std::uintptr_t itemUid4 = 0xa0; // test these
+        inline constexpr std::uintptr_t heldEntity = 0x30; // test these
+        inline constexpr std::uintptr_t heldEntity2 = 0x80;
+        inline constexpr std::uintptr_t health = 0;
+        inline constexpr std::uintptr_t maxHealth = 0;
+    } // Item
+
+    namespace BaseCombatEntity {
+        inline constexpr std::uintptr_t lifeState = 0x270;
+        inline constexpr std::uintptr_t health = 0x27c;
+        inline constexpr std::uintptr_t maxHealth = 0x280;
+    } // BaseCombatEntity
+
+    namespace BaseProjectile {
+        inline constexpr std::uintptr_t recoilProp = 0x3a8;
+        inline constexpr std::uintptr_t primaryMagazine = 0x380;
+    } // BaseProjectile
+
+    namespace BaseViewModel {
+        inline constexpr std::uintptr_t BaseViewModel_C = 0xe4a2f20;
+        inline constexpr std::uintptr_t animationEvents = 0xb8;
+        inline constexpr std::uintptr_t list = 0x238;
+    } // BaseViewModel
+
+    namespace ItemContainer {
+        inline constexpr std::uintptr_t list = 0x60;
+    } // ItemContainer
+
+    namespace ItemDefinition {
+        inline constexpr std::uintptr_t shortName = 0x28;
+        inline constexpr std::uintptr_t itemDisplayName = 0x40;
+        inline constexpr std::uintptr_t itemModWearable = 0x180;
+        inline constexpr std::uintptr_t itemDisplayEnglish = 0;
+    } // ItemDefinition
+
+    namespace ListComponent_Projectile {
+        inline constexpr std::uintptr_t ListComponent_C = 0xe4dd1c0;
+        inline constexpr std::uintptr_t static_fields = 0xb8;
+        inline constexpr std::uintptr_t parent_static = 0x10;
+        inline constexpr std::uintptr_t buffer = 0x10;
+    } // ListComponent_Projectile
+
+    namespace Magazine {
+        inline constexpr std::uintptr_t Capacity = 0;
+        inline constexpr std::uintptr_t Contents = 0;
+    } // Magazine
+
+    namespace Model {
+        inline constexpr std::uintptr_t rootBone = 0x28;
+        inline constexpr std::uintptr_t headBone = 0x30;
+        inline constexpr std::uintptr_t boneTransforms = 0x50;
+    } // Model
+
+    namespace PlayerEyes {
+        inline constexpr std::uintptr_t viewOffset = 0x40;
+        inline constexpr std::uintptr_t bodyRotation = 0x50;
+        inline constexpr std::uintptr_t eyeRotation = 0;
+        inline constexpr std::uintptr_t unkQuanternion = 0x6c;
+    } // PlayerEyes
+
+    namespace PlayerInventory {
+        inline constexpr std::uintptr_t container1 = 0x28; // test these
+        inline constexpr std::uintptr_t container2 = 0x58;
+        inline constexpr std::uintptr_t container3 = 0x60;
+    } // PlayerInvetory
+
+    namespace PlayerModel {
+        inline constexpr std::uintptr_t position = 0x1f8;
+        inline constexpr std::uintptr_t velocity = 0x21c;
+        inline constexpr std::uintptr_t newVelocity = 0;
+        inline constexpr std::uintptr_t SkinnedMultiMesh = 0x2b8;
+    } // PlayerModel
+
+    namespace RecoilProperties {
+        inline constexpr std::uintptr_t recoilYawMin = 0x18;
+        inline constexpr std::uintptr_t recoilYawMax = 0x1c;
+        inline constexpr std::uintptr_t recoilPitchMin = 0x20;
+        inline constexpr std::uintptr_t recoilPitchMax = 0x24;
+        inline constexpr std::uintptr_t newRecoilOverride = 0x80;
+    } // RecoilProperties
+
+    namespace SkinnedMultiMesh {
+        inline constexpr std::uintptr_t rendererList = 0x40;
+    } // SkinnedMultiMesh
+
+    namespace TOD_Sky {
+        inline constexpr std::uintptr_t TOD_Sky_C = 0xe401ad8;
+    } // namespace TOD_Sky
+} // namespace offsets
+
+
+//auto generated decrypt: client_entities
+uintptr_t client_entities(uintptr_t a1) {
+                                          
+    uint32_t eax = 0, ecx = 0, r14d = 0;
+    uintptr_t rax = 0, rbx = 0, rcx = a1, rdi = a1;
+
+    rax = driver.read<uintptr_t>(rdi + 0x18);
+    uint32_t* rdx = (uint32_t*)&rax;
+
+    for (uint32_t r8d = 2; r8d > 0; --r8d) {
+        ecx = *(uint32_t*)(rdx); // mov ecx, [rdx]
+        eax = *(uint32_t*)(rdx); // mov eax, [rdx]
+        rdx = (uint32_t*)((uint8_t*)rdx + 0x04); // lea rdx, [rdx+0x04]
+        eax <<= 0x12; // shl eax, 0x12
+        ecx >>= 0x0E; // shr ecx, 0x0E
+        ecx |= eax; // or ecx, eax
+        ecx += 0xFFFFFFFF97ACC028; // add ecx, 0x97ACC028
+        eax = ecx; // mov eax, ecx
+        ecx <<= 0x0C; // shl ecx, 0x0C
+        eax >>= 0x14; // shr eax, 0x14
+        eax |= ecx; // or eax, ecx
+        eax += 0x12C55E8B; // add eax, 0x12C55E8B
+        *((uint32_t*)rdx - 1) = eax; // mov [rdx-0x04], eax
+    }
+
+    return decryptIl2cppHandle(rax);
+}
+
+
+//auto generated decrypt: entity_list
+uintptr_t entity_list(uintptr_t a1) {
+                                          
+    uint32_t eax = 0, ecx = 0, r14d = 0;
+    uintptr_t rax = 0, rbx = 0, rcx = a1, rdi = a1;
+
+    rax = driver.read<uintptr_t>(rdi + 0x18);
+    uint32_t* rdx = (uint32_t*)&rax;
+
+    for (uint32_t r8d = 2; r8d > 0; --r8d) {
+        ecx = *(uint32_t*)(rdx); // mov ecx, [rdx]
+        eax = *(uint32_t*)(rdx); // mov eax, [rdx]
+        rdx = (uint32_t*)((uint8_t*)rdx + 0x04); // lea rdx, [rdx+0x04]
+        eax <<= 0x0D; // shl eax, 0x0D
+        ecx >>= 0x13; // shr ecx, 0x13
+        ecx |= eax; // or ecx, eax
+        ecx += 0x151DA616; // add ecx, 0x151DA616
+        eax = ecx; // mov eax, ecx
+        ecx <<= 0x10; // shl ecx, 0x10
+        eax >>= 0x10; // shr eax, 0x10
+        eax |= ecx; // or eax, ecx
+        *((uint32_t*)rdx - 1) = eax; // mov [rdx-0x04], eax
+    }
+
+    return decryptIl2cppHandle(rax);
+}
+
+                              
+// auto generated decrypt: cl_active_item
+// if there is error in rdx = (uint32_t*)((uint8_t*) change uint32_t* to uintptr_t
+uintptr_t cl_active_item(uintptr_t a1) {
+
+    uint32_t eax = 0, ebx = 0, ecx = 0, edx = 0, r8d = 0, r9d = 0;
+    uintptr_t rax = 0, rbx = 0, rcx = a1, rdx = 0, r8 = 0, r9 = 0;
+
+    uintptr_t val = a1;
+    uintptr_t base_ptr = (uintptr_t)&val;
+    rax = base_ptr; rdx = base_ptr; rcx = base_ptr; rbx = base_ptr; r8 = base_ptr; r9 = base_ptr;
+
+    for (uint32_t i = 2; i > 0; --i) {
+        // UNHANDLED INSTRUCTION: movups [rsp+0x20], xmm0
+        // UNHANDLED INSTRUCTION: nop [rax+rax*1], ax
+        eax = *(uint32_t*)(r8); // mov eax, [r8]
+        r8 = (uint32_t*)((uint8_t*)r8 + 0x04); // lea r8, [r8+0x04]
+        eax += 0x069E0F77; // add eax, 0x69E0F77
+        edx = eax; // mov edx, eax
+        eax <<= 0x1C; // shl eax, 0x1C
+        edx >>= 0x04; // shr edx, 0x04
+        edx |= eax; // or edx, eax
+        edx ^= 0xFFFFFFFFDE2AC61B; // xor edx, 0xDE2AC61B
+        *((uint32_t*)r8 - 1) = edx; // mov [r8-0x04], edx
+    }
+
+    return val;
 }
